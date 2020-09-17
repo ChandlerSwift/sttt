@@ -10,6 +10,10 @@ let app = new Vue({
         type: "alert-info",
         content: "<b>Info!</b> Here's some info."
       },
+      {
+        type: "alert-success",
+        content: "<b>Success!</b> Content was updated!."
+      },
     ]
   },
   methods: {
