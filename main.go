@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"sttt.chandlerswift.com/sttt/internal/models"
+	"github.com/chandlerswift/sttt/internal/models"
 
 	"github.com/gorilla/mux"
 	"github.com/spf13/viper"

@@ -1,4 +1,4 @@
-module sttt.chandlerswift.com/sttt
+module github.com/chandlerswift/sttt
 
 go 1.15
 

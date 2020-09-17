@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"gorm.io/gorm"
-	"sttt.chandlerswift.com/sttt/pkg/sttt"
+	"github.com/chandlerswift/sttt/pkg/sttt"
 )
 
 // State describes what state the game is in
