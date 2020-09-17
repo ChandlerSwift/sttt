@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Chandler Swift">
+	<title>Super Tic-Tac-Toe</title>
+
+	<link rel="canonical" href="https://sttt.chandlerswift.com/">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<!-- Favicons --
+	<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#563d7c"> -->
+
+	<style>
+		html {
+			font-size: 14px;
+		}
+
+		@media (min-width: 768px) {
+			html {
+				font-size: 16px;
+			}
+		}
+
+		.container {
+			max-width: 960px;
+		}
+
+		.content {
+			max-width: 700px;
+		}
+
+		.card-deck .card {
+			min-width: 220px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+		<h5 class="my-0 mr-md-auto font-weight-normal">Super Tic-Tac-Toe</h5>
+		<nav class="my-2 my-md-0 mr-md-3">
+			<a class="p-2 text-dark" href="https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe">About the game</a>
+			<a class="p-2 text-dark" href="https://mathwithbaddrawings.com/2013/06/16/ultimate-tic-tac-toe/">How to Play</a>
+			<a class="p-2 text-dark" href="/leaderboard">Leaderboard</a>
+			<a class="p-2 text-dark" href="/login">Sign in</a>
+		</nav>
+		<a class="btn btn-outline-primary" href="/register">Sign up</a>
+	</div>
+	<div id="app" class="container">
+		<div v-for="alert in alerts" class="alert" v-bind:class="alert.type" role="alert" v-html="alert.content"></div>
+		<div class="content px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+			<h1 class="display-4">Super Tic-Tac-Toe</h1>
+			<p class="lead">
+				Ultimate tic-tac-toe (also known as super tic-tac-toe, strategic tic-tac-toe, meta tic-tac-toe,
+				tic-tac-tic-tac-toe-toe, or (tic-tac-toe)²) is a board game composed of nine tic-tac-toe boards arranged in
+				a 3×3 grid. Players take turns playing in the smaller tic-tac-toe boards until one of them wins in the
+				larger tic-tac-toe board. Compared to traditional tic-tac-toe, strategy in this game is conceptually more
+				difficult and has proven more challenging for computers. <small class="text-muted">(from <a href="https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe">Wikipedia</a>)</small></p>
+			<button class="btn btn-outline-primary btn-lg" v-on:click="startGame">Start a game</button>
+			<button class="btn btn-outline-primary btn-lg" v-on:click="joinGame">Join a game</button>
+		</div>
+	</div>
+	<div class="container">
+		<footer class="pt-4 my-md-5 pt-md-5 border-top">
+			<div class="row">
+				<div class="col-12 col-md">
+					<small class="d-block text-muted">a project of</small>
+					<h5><a href="https://chandlerswift.com/">chandlerswift.com</a></h5>
+					<small class="d-block mb-3 text-muted">Licensed under the <a href="https://opensource.org/licenses/AGPL-3.0">AGPL</a></small>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Resources</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe">About the game</a></li>
+						<li><a class="text-muted" href="https://mathwithbaddrawings.com/2013/06/16/ultimate-tic-tac-toe/">How to play</a></li>
+						<li><a class="text-muted" href="/swagger.json">API docs</a></li>
+						<li><a class="text-muted" href="https://github.com/chandlerswift/sttt">Source Code</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/static/main.js"></script>
+</html>
